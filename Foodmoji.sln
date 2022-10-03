@@ -3,7 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Foodmoji", "Foodmoji\Foodmoji.csproj", "{E7416C2F-BAAF-48C6-96C4-8EF426CC4581}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Foodmoji", "Foodmoji\Foodmoji.csproj", "{E7416C2F-BAAF-48C6-96C4-8EF426CC4581}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Foodmoji_Infastructure", "Foodmoji_Infastructure\Foodmoji_Infastructure.csproj", "{AE8DF5F7-8F5C-4F65-BB14-27AE1C2A40B3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Foodmoji_Domain", "Foodmoji_Domain\Foodmoji_Domain.csproj", "{D7FAE5B9-ACFC-42A9-855A-15C20E1AEFA4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Foodmoji.Api", "Foodmoji.Api\Foodmoji.Api.csproj", "{27D00FA4-FD16-4D7E-A09C-9B4C03817B41}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Foodmoji_Api", "Foodmoji_Api", "{A7876C2E-B424-42EA-9982-3EAEC71B3600}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{2C28200C-7F11-4423-9D52-25B38F043DFC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infastructure", "Infastructure", "{BA6976F3-EB59-40F7-8037-FB29B9B1CA01}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{0CE170C4-F8DA-400B-B929-9AD8EF0CF71D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +29,27 @@ Global
 		{E7416C2F-BAAF-48C6-96C4-8EF426CC4581}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E7416C2F-BAAF-48C6-96C4-8EF426CC4581}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E7416C2F-BAAF-48C6-96C4-8EF426CC4581}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE8DF5F7-8F5C-4F65-BB14-27AE1C2A40B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE8DF5F7-8F5C-4F65-BB14-27AE1C2A40B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE8DF5F7-8F5C-4F65-BB14-27AE1C2A40B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE8DF5F7-8F5C-4F65-BB14-27AE1C2A40B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7FAE5B9-ACFC-42A9-855A-15C20E1AEFA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7FAE5B9-ACFC-42A9-855A-15C20E1AEFA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7FAE5B9-ACFC-42A9-855A-15C20E1AEFA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7FAE5B9-ACFC-42A9-855A-15C20E1AEFA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27D00FA4-FD16-4D7E-A09C-9B4C03817B41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27D00FA4-FD16-4D7E-A09C-9B4C03817B41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27D00FA4-FD16-4D7E-A09C-9B4C03817B41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27D00FA4-FD16-4D7E-A09C-9B4C03817B41}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E7416C2F-BAAF-48C6-96C4-8EF426CC4581} = {0CE170C4-F8DA-400B-B929-9AD8EF0CF71D}
+		{AE8DF5F7-8F5C-4F65-BB14-27AE1C2A40B3} = {BA6976F3-EB59-40F7-8037-FB29B9B1CA01}
+		{D7FAE5B9-ACFC-42A9-855A-15C20E1AEFA4} = {2C28200C-7F11-4423-9D52-25B38F043DFC}
+		{27D00FA4-FD16-4D7E-A09C-9B4C03817B41} = {A7876C2E-B424-42EA-9982-3EAEC71B3600}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4816146C-5717-43DD-8AAD-6E5DA3669A26}

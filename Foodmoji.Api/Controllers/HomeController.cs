@@ -1,8 +1,8 @@
-﻿using Foodmoji.Models;
+﻿using Foodmoji_Domain.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace Foodmoji.Controllers
+namespace Foodmoji_Infastructure.Controllers
 {
     public class HomeController : Controller
     {

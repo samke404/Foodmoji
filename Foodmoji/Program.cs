@@ -1,4 +1,4 @@
-using Foodmoji.Data;
+using Foodmoji_Infastructure.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 

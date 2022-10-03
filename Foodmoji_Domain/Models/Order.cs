@@ -1,17 +1,14 @@
 ﻿using System;
 
-namespace Foodmoji.Models
+namespace Foodmoji_Domain.Models
 {
     public class Order
     {
         public int orderId { get; set; }
-        public DateOnly date { get; set; }
+        public DateTime date { get; set; }
         public int quantity { get; set; }
         public double totalPrice { get; set; }
         
-        public Order()
-        {
-
-        }
+      
     }
 }

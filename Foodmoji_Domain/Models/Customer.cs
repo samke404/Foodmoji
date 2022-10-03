@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Foodmoji.Models
+namespace Foodmoji_Domain.Models
 {
     public class Customer
     {
@@ -11,9 +11,6 @@ namespace Foodmoji.Models
         public string email { get; set; }
         public string address { get; set; }
 
-        public Customer()
-        {
-
-        }
+      
     }
 }

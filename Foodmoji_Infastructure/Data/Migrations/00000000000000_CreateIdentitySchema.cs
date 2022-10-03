@@ -1,8 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
-using System;
 
-namespace Foodmoji.Data.Migrations
+namespace Foodmoji_Infastructure.Data.Migrations
 {
     public partial class CreateIdentitySchema : Migration
     {

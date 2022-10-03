@@ -1,4 +1,4 @@
-namespace Foodmoji.Models
+namespace Foodmoji_Domain.Models
 {
     public class ErrorViewModel
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Foodmoji.Models
+namespace Foodmoji_Domain.Models
 {
     public class Product
     {
@@ -11,9 +11,7 @@ namespace Foodmoji.Models
         public double price { get; set; }
         public double totalPrice { get; set; }
 
-        public Product()
-        {
-
-        }
+      
+      
     }
 }
