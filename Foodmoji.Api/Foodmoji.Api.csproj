@@ -12,7 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Foodmoji\Foodmoji.csproj" />
     <ProjectReference Include="..\Foodmoji_Domain\Foodmoji_Domain.csproj" />
     <ProjectReference Include="..\Foodmoji_Infastructure\Foodmoji_Infastructure.csproj" />
   </ItemGroup>
