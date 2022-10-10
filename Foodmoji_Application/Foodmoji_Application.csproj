@@ -7,7 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="ViewModels\Customer\" />
+    <Folder Include="ViewModels\CustomerViewModel\" />
+    <Folder Include="ViewModels\AccountViewModel\" />
+    <Folder Include="ViewModels\AccountRoleViewModel\" />
+    <Folder Include="ViewModels\ProductViewModel\" />
+    <Folder Include="ViewModels\RoleViewModel\" />
+    <Folder Include="ViewModels\OrderViewModel\" />
   </ItemGroup>
 
 </Project>
