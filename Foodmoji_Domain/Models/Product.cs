@@ -14,11 +14,6 @@ namespace Foodmoji_Domain.Models
         public double Price { get; set; }
         public double TotalPrice { get; set; }
 
-        //Foreign Key
-
-        [ForeignKey("Order")]
-        public int OrderId { get; set; }
-        public virtual Order Order { get; set; }
 
 
     }

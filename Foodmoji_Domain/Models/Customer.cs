@@ -18,10 +18,5 @@ namespace Foodmoji_Domain.Models
         public string Email { get; set; }
         public string Address { get; set; }
 
-        //Foreign Key
-
-        [ForeignKey("Order")]
-        public int OrderId { get; set; }
-        public virtual Order Order { get; set; }
     }
 }

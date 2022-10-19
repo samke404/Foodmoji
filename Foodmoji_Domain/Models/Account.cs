@@ -26,9 +26,6 @@ namespace Foodmoji_Domain.Models
         public string PhoneNumber { get; set; }
 
 
-        [ForeignKey("AccountRole")]
-        public int AccountRoleId { get; set; }
-        public virtual AccountRole AccountRole { get; set; }
 
 
     }

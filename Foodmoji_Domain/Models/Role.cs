@@ -13,7 +13,7 @@ namespace Foodmoji_Domain.Models
         [Key]
         public int Id { get; set; }
         [MaxLength(100)]
-        public string RoleName { get; set; }
+        public string Name { get; set; }
 
         [MaxLength(250)]
         public string Description { get; set; }
