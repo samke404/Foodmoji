@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,7 +11,7 @@ namespace Foodmoji_Domain.Models
     public class Account
     {
         [Key]
-        public int AccountId { get; set; }
+        public int Id { get; set; }
 
         [MaxLength(50)]
         public string FirstName { get; set; }
@@ -24,11 +25,11 @@ namespace Foodmoji_Domain.Models
         [MaxLength(15)]
         public string PhoneNumber { get; set; }
 
-        public virtual List<AccountRole> Roles { get; set; }
 
-        public Account()
-        {
-            Roles = new List<AccountRole>();
-        }
+        [ForeignKey("AccountRole")]
+        public int AccountRoleId { get; set; }
+        public virtual AccountRole AccountRole { get; set; }
+
+
     }
 }

@@ -1,19 +1,25 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Foodmoji_Domain.Models
 {
     public class Product
     {
         [Key]
-        public int productId { get; set; }
-        public string productName { get; set; }
-        public string picture { get; set; }
-        public int quantity { get; set; }
-        public double price { get; set; }
-        public double totalPrice { get; set; }
+        public int Id { get; set; }
+        public string ProductName { get; set; }
+        public string Picture { get; set; }
+        public int Quantity { get; set; }
+        public double Price { get; set; }
+        public double TotalPrice { get; set; }
 
-      
-      
+        //Foreign Key
+
+        [ForeignKey("Order")]
+        public int OrderId { get; set; }
+        public virtual Order Order { get; set; }
+
+
     }
 }
