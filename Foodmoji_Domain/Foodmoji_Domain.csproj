@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Foodmoji_Application\Foodmoji_Application.csproj" />
+  </ItemGroup>
+
 </Project>
