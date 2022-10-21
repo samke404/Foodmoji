@@ -6,12 +6,19 @@ namespace Foodmoji_Infastructure.Data
 {
     public class ApplicationDbContext : IdentityDbContext
     {
-        ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
-            : base(options)
+       public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+            : base(options) 
         {
+        
         }
         public DbSet<Product> Products { get; set; }
+        public DbSet<Account> Accounts { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<Customer> Customers { get; set; }
+        public DbSet<Role> Roles { get; set; }
+        public DbSet<AccountRole> AccountRoles { get; set; }
+
+
     }
 }
 
-//

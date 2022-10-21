@@ -1,22 +1,22 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Foodmoji_Domain.Models
 {
     public class Customer
     {
         [Key]
-        public int customerId { get; set; }
+        public int Id { get; set; }
 
         [MaxLength(100)]
-        public string firstname { get; set; }
+        public string Firstname { get; set; }
 
         [MaxLength(100)]
-        public string lastname { get; set; }
-        public string cellphoneNo { get; set; }
-        public string email { get; set; }
-        public string address { get; set; }
+        public string Lastname { get; set; }
+        public string CellphoneNo { get; set; }
+        public string Email { get; set; }
+        public string Address { get; set; }
 
-      
     }
 }

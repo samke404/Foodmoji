@@ -15,9 +15,6 @@ namespace Foodmoji_Infastructure.Controllers
 
         public IActionResult Index()
         {
-           /* var builder = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("appsettings.json", optional: false);
-            IConfiguration configuration = builder.Build();
-            string constring = configuration.GetValue<string>("ConnectionString:DefaultConnection");*/
             return View();
         }
 
