@@ -15,4 +15,8 @@
     <Folder Include="ViewModels\OrderViewModel\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.10" />
+  </ItemGroup>
+
 </Project>
