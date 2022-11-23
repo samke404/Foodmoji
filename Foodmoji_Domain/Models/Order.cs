@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Runtime.CompilerServices;
 
 namespace Foodmoji_Domain.Models
 {
@@ -9,6 +10,7 @@ namespace Foodmoji_Domain.Models
         [Key]
         public int Id { get; set; }
         public DateTime Date { get; set; }
+        [Required(ErrorMessage = "Please enter the quantity for this order")]
         public int Quantity { get; set; }
         public double TotalPrice { get; set; }
 

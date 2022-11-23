@@ -1,15 +1,10 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
 
-namespace Foodmoji_Domain.Models
+namespace Foodmoji_Application.ViewModels.Product
 {
-    public class Product
+    public class AddProductViewModel
     {
-        [Key]
-        public int Id { get; set; }
-
-        [Required (ErrorMessage = "Please provide a valid product name")]
+        [Required(ErrorMessage = "Please provide a valid product name")]
         public string ProductName { get; set; }
         public string Picture { get; set; }
 
@@ -22,8 +17,5 @@ namespace Foodmoji_Domain.Models
         [Required(ErrorMessage = "Price of the product is required")]
         public double Price { get; set; }
         public double TotalPrice { get; set; }
-
-
-
     }
 }

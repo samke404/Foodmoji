@@ -12,10 +12,10 @@ namespace Foodmoji_Domain.Models
     {
         [Key]
         public int Id { get; set; }
-        [MaxLength(100)]
+        [MaxLength(100), Required(ErrorMessage = "Nmae is required")]
         public string Name { get; set; }
 
-        [MaxLength(250)]
+        [MinLength(50), Required(ErrorMessage = "Please provide a brief description of the role")]
         public string Description { get; set; }
 
     }
