@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Foodmoji.Api.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/accounts")]
     [ApiController]
     public class AccountController : ControllerBase
     {
