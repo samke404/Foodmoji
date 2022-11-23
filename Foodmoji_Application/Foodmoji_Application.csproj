@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -7,16 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="ViewModels\CustomerViewModel\" />
-    <Folder Include="ViewModels\AccountViewModel\" />
-    <Folder Include="ViewModels\AccountRoleViewModel\" />
-    <Folder Include="ViewModels\ProductViewModel\" />
-    <Folder Include="ViewModels\RoleViewModel\" />
-    <Folder Include="ViewModels\OrderViewModel\" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.10" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.10" />
+    <ProjectReference Include="..\Foodmoji_Domain\Foodmoji_Domain.csproj" />
   </ItemGroup>
 
 </Project>
