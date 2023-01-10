@@ -1,3 +1,5 @@
+using Foodmoji_Application.Repository.DomainRepository;
+using Foodmoji_Application.Repository.Wrapper;
 using Foodmoji_Infastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
@@ -5,7 +7,9 @@ using System.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// Add services to the container - Register API
+
+builder.Services.AddScoped<IAccountRepository, AccountRepository>();
 
 builder.Services.AddControllers();
 builder.Services.AddDbContext<ApplicationDbContext>(options =>

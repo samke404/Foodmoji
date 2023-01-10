@@ -1,4 +1,5 @@
 ﻿using Foodmoji_Application.Helpers.Extensions;
+using Foodmoji_Application.Repository.DomainRepository;
 using Foodmoji_Application.ViewModels.Account;
 using Foodmoji_Domain.Models;
 using Foodmoji_Infastructure.Data;
@@ -16,10 +17,10 @@ namespace Foodmoji.Api.Controllers
 
         //inject db
 
-        private readonly ApplicationDbContext _db;
-        public AccountController(ApplicationDbContext db)
+        private readonly IAccountRepository _accountRepo;
+        public AccountController(IAccountRepository accountRepo)
         {
-            _db = db;   
+            _accountRepo = accountRepo;   
         }
 
         [HttpPost]
@@ -32,7 +33,9 @@ namespace Foodmoji.Api.Controllers
 
             //Check if user already has an account using their email address
 
-            var dbUser = _db.Accounts.Where(u => u.Email == account.Email).FirstOrDefault();
+            //var dbUser = _db.Accounts.Where(u => u.Email == account.Email).FirstOrDefault();
+
+            var dbUser = _accountRepo.FindByCondition(user=>user.Email == account.Email).FirstOrDefault();
 
             if (dbUser != null)
             {
@@ -43,8 +46,9 @@ namespace Foodmoji.Api.Controllers
                 var newAccount = account.ToEntity();
 
                 //Add changes to db
-                _db.Accounts.Add(newAccount);
-                await _db.SaveChangesAsync();
+                _accountRepo.Create(newAccount);
+                
+                _accountRepo.Save();
 
                 return Ok(newAccount.Id);
             }

@@ -44,5 +44,52 @@ namespace Foodmoji_Application.Repository.RepositoryBase
         {
              ApplicationDbContext.Set<T>().Remove(entity);
         }
+        public void Save()
+
+        {
+
+            ApplicationDbContext.SaveChanges();
+
+        }
+
+        private bool disposed = false;
+
+
+
+        protected virtual void Dispose(bool disposing)
+
+        {
+
+            if (!this.disposed)
+
+            {
+
+                if (disposing)
+
+                {
+
+                    ApplicationDbContext.Dispose();
+
+                }
+
+            }
+
+            this.disposed = true;
+
+        }
+
+
+
+        public void Dispose()
+
+        {
+
+            Dispose(true);
+
+
+
+            GC.SuppressFinalize(this);
+
+        }
     }
 }
