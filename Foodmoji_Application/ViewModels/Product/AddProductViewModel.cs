@@ -11,11 +11,11 @@ namespace Foodmoji_Application.ViewModels.Product
         [MinLength(10), Required(ErrorMessage = "Please enter a description for the product")]
         public string ProductDescription { get; set; }
 
-        [MaxLength(5), Required(ErrorMessage = "Enter the quantity of the product, only 5 products per customer")]
+        [MaxLength(5), Required(ErrorMessage = "Enter the quantity of the product available in store")]
         public int Quantity { get; set; }
 
         [Required(ErrorMessage = "Price of the product is required")]
         public double Price { get; set; }
-        public double TotalPrice { get; set; }
+       // public double TotalPrice { get; set; }
     }
 }

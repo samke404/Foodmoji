@@ -1,4 +1,5 @@
 using Foodmoji_Application.Repository.DomainRepository;
+using Foodmoji_Application.Repository.productRepository;
 using Foodmoji_Application.Repository.Wrapper;
 using Foodmoji_Infastructure.Data;
 using Microsoft.EntityFrameworkCore;
@@ -10,6 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container - Register API
 
 builder.Services.AddScoped<IAccountRepository, AccountRepository>();
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
 
 builder.Services.AddControllers();
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
@@ -35,4 +37,3 @@ app.MapControllers();
 
 app.Run();
 
-//options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))

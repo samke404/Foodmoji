@@ -1,4 +1,5 @@
 ﻿using Foodmoji_Application.Repository.DomainRepository;
+using Foodmoji_Application.Repository.productRepository;
 using Foodmoji_Infastructure.Data;
 using System;
 using System.Collections.Generic;
@@ -12,6 +13,7 @@ namespace Foodmoji_Application.Repository.Wrapper
     {
         public ApplicationDbContext _db;
         public IAccountRepository _account;
+        public IProductRepository _product;
 
         public IAccountRepository Account
         {
@@ -21,6 +23,18 @@ namespace Foodmoji_Application.Repository.Wrapper
                 _account = new AccountRepository(_db);
             }
             return _account;
+            }
+        }
+
+        public IProductRepository Product
+        {
+            get
+            {
+                if (_product == null)
+                {
+                    _product = new ProductRepository(_db);
+                }
+                return (_product);
             }
         }
 

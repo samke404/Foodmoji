@@ -21,7 +21,7 @@ namespace Foodmoji_Application.Helpers.Extensions
                 ProductDescription = model.ProductDescription,
                 Quantity = model.Quantity,
                 Price = model.Price,
-                TotalPrice = model.TotalPrice,
+                //TotalPrice = model.TotalPrice,
 
             };
         }
