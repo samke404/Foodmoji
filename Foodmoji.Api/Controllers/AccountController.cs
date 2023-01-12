@@ -33,8 +33,6 @@ namespace Foodmoji.Api.Controllers
 
             //Check if user already has an account using their email address
 
-            //var dbUser = _db.Accounts.Where(u => u.Email == account.Email).FirstOrDefault();
-
             var dbUser = _accountRepo.FindByCondition(user=>user.Email == account.Email).FirstOrDefault();
 
             if (dbUser != null)
