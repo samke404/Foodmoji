@@ -25,7 +25,7 @@ namespace Foodmoji_Application.Repository.RepositoryBase
             return ApplicationDbContext.Set<T>().AsNoTracking();
         }
 
-        public IQueryable<T> FindByCondition(Expression<Func<T, bool>> expression)
+        public IQueryable<T> Where(Expression<Func<T, bool>> expression)
         {
             return ApplicationDbContext.Set<T>().Where(expression).AsNoTracking();
         }
