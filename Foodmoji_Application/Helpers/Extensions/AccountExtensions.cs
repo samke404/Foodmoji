@@ -21,5 +21,16 @@ namespace Foodmoji_Application.Helpers.Extensions
                 Password = model.Password
             };
         }
+
+        public static Account ToEntity(this UpdateAccountViewModel model, Account entity)
+        {
+            entity.FirstName = model.FirstName;
+            entity.Surname = model.Surname;
+            entity.Email = model.Email;
+            entity.PhoneNumber = model.PhoneNumber;
+            entity.Password = model.Password;
+
+            return entity;
+        }
     }
 }

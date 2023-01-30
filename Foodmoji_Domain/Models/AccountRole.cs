@@ -7,11 +7,9 @@ using System.Threading.Tasks;
 
 namespace Foodmoji_Domain.Models
 {
-    public class AccountRole
+    public class AccountRole : AuditEntity<int>
     {
-        [Key]
-
-        public int Id { get; set; }
+       
         public int AccountId { get; set; }
         public virtual Account Account { get; set; }
         // Public List<Account> Accounts { get: set} = new List<Account>(); lookup

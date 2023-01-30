@@ -5,10 +5,9 @@ using System.Runtime.CompilerServices;
 
 namespace Foodmoji_Domain.Models
 {
-    public class Order
+    public class Order : AuditEntity<int>
     {
-        [Key]
-        public int Id { get; set; }
+        
         public DateTime Date { get; set; }
         [Required(ErrorMessage = "Please enter the quantity for this order")]
         public int Quantity { get; set; }

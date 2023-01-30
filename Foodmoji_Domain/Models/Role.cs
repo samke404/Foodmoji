@@ -8,10 +8,9 @@ using System.Threading.Tasks;
 
 namespace Foodmoji_Domain.Models
 {
-    public class Role
+    public class Role : AuditEntity<int>
     {
-        [Key]
-        public int Id { get; set; }
+        
         [MaxLength(100), Required(ErrorMessage = "Nmae is required")]
         public string Name { get; set; }
 

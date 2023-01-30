@@ -68,8 +68,10 @@ namespace Foodmoji.Api.Controllers
         [Route("login")]
         public async Task<IActionResult> userLogin([FromBody] LoginViewModel account)
         {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
             try
             {
+                
                 //String userPassword = password.hashPassword(account.Password);
                 var dbUser = _accountRepo.Where(user => user.Email == account.Email && user.Password == account.Password).Select(user => new
                 {
@@ -97,15 +99,16 @@ namespace Foodmoji.Api.Controllers
 
         [HttpPut]
         [Route("updateUserAccount")]
-        public async Task<IActionResult> updateUserAccount([FromBody] RegisterAccountViewModel account)
+        public async Task<IActionResult> updateUserAccount([FromBody] UpdateAccountViewModel model)
         {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
             try
             {
-                var userAccount = _accountRepo.FindAll();
+                var userAccount = _accountRepo.Where(x => x.Id == model.Id).FirstOrDefault();
 
                 if (userAccount != null)
                 {
-                   var updateAccount = account.ToEntity();
+                   var updateAccount = model.ToEntity(userAccount);
                      _accountRepo.Update(updateAccount);
                     _accountRepo.Save();
 
@@ -131,7 +134,33 @@ namespace Foodmoji.Api.Controllers
         [Route("getAllAccounts")]
         public async Task<IActionResult> getAllAccounts()
         {
-            return Ok(_accountRepo.FindAll());
+            try
+            {
+                
+                return Ok(_accountRepo.FindAll);
+            } 
+            catch (Exception)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "Error retrieving data from the database");
+            }
+            
+        }
+
+        [HttpGet]
+        [Route("userAccount/{id}")]
+        public async Task<IActionResult> getId(int id)
+        { 
+            
+            return Ok(new {userID = id});
+        }
+
+        [HttpGet]
+        [Route("Users/currentUser")]
+        public async Task<IActionResult> getLoggedInUserID()
+        {
+            int id = Convert.ToInt32(HttpContext.User.FindFirstValue("userID"));
+
+            return Ok(new { userID = id });
         }
 
     }
