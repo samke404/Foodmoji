@@ -4,10 +4,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Foodmoji_Domain.Models
 {
-    public class Customer
+    public class Customer : AuditEntity<int>
     {
-        [Key]
-        public int Id { get; set; }
+      
 
         [MaxLength(100), Required(ErrorMessage = "Name is required")]
         public string Firstname { get; set; }

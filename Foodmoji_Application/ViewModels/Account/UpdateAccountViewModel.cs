@@ -1,16 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Foodmoji_Domain.Models
+namespace Foodmoji_Application.ViewModels.Account
 {
-    public class Account : AuditEntity<int>
+    public class UpdateAccountViewModel
     {
-    
+        public int Id { get; set; }
 
         [MaxLength(50), Required(ErrorMessage = "Firstname is required")]
         public string FirstName { get; set; }
@@ -27,9 +26,5 @@ namespace Foodmoji_Domain.Models
 
         [MaxLength(6), Required(ErrorMessage = "Please enter a password with maximum of 6 characters")]
         public string Password { get; set; }
-
-
-
-
     }
 }
